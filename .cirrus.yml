@@ -19,8 +19,9 @@ task:
       - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/dtclone.sh | bash
 
   Building_script:
-      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/building.sh | bash
+      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/building.sh | bash
 
   Uploading_script:
       - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/uploading.sh | bash
    
+##
