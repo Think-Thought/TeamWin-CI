@@ -1,23 +1,26 @@
 env:
+    # Config
+    CONFIG: config.sh
+
     # Cirrus Specific Vars (Do *NOT* Change)
     CIRRUS_SHELL: bash
 
 task:
   name: "PBRP Build"
-  timeout_in: 60m
+  timeout_in: 90m
   container:
       image: ghcr.io/sushrut1101/docker:arch
-      cpu: 8
-      memory: 32G
+      cpu: 5
+      memory: 20G
 
-  Repo Sync_script:
-      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/reposync.sh | bash
+  Sync_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/reposync.sh)"
       
-  Device Tree Cloning_script:
-      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/dtclone.sh | bash
+  DT_Clone_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/dtclone.sh)"
 
-  Building_script:
-      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/building.sh | bash
+  Build_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/building.sh)"
 
-  Uploading_script:
-      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/uploading.sh | bash
+  Upload_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/uploading.sh)"
