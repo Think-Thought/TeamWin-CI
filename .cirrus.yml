@@ -6,18 +6,18 @@ env:
     CIRRUS_SHELL: bash
 
 task:
-  name: "PBRP Build"
+  name: "TWRP Build"
   timeout_in: 90m
   container:
       image: ghcr.io/sushrut1101/docker:arch
-      cpu: 5
-      memory: 20G
+      cpu: 8
+      memory: 32G
 
   Sync_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/reposync.sh)"
       
   DT_Clone_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/dtclone.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbdt.sh)"
 
   Build_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/building.sh)"
