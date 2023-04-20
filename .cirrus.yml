@@ -14,13 +14,13 @@ task:
       memory: 32G
 
   Sync_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/reposync.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/twrp/reposync.sh)"
       
   DT_Clone_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbdt.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/RMX3461/dtclone.sh)"
 
   Build_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/pbrp/building.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/RMX3461/building.sh)"
 
   Upload_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/uploading.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/RMX3461/uploading.sh)"
