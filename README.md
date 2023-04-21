@@ -1,5 +1,5 @@
-# PitchBlack Recovery CI
-A Free CI to Build PitchBlack Recovery
+# TeamWin Recovery CI
+A Free CI to Build TeamWin Recovery
 
 ## How to Use?
 ### - Fork and Build
