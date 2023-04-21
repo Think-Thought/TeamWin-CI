@@ -10,8 +10,8 @@ task:
   timeout_in: 90m
   container:
       image: ghcr.io/sushrut1101/docker:arch
-      cpu: 5
-      memory: 20G
+      cpu: 6
+      memory: 24G
 
   Sync_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/twrp/reposync.sh)"
